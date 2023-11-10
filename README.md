@@ -20,8 +20,8 @@ ex1. **javac -d bin edu/handong/csee/plt/Main.java** **edu/handong/csee/plt/ast/
 3. Run
 java -cp [directory containing .class files] [class path where the main method exists] [class name_that_has_main_method] [<option.>] ["<FAE.>"]
 
-* <option> : not always required
-* <FAE> : a concrete syntax ready to be converted into FAE type
+* <option.> : not always required
+* <FAE.> : a concrete syntax ready to be converted into FAE type
 
 ##### Enable only parser
 set <option.> to '-p'.\
