@@ -31,7 +31,7 @@ do not set <option.>.\
 ex1. java -cp bin edu/handong/csee/plt/Main "{with {x 10} {+ 4 5}}"
 
 ## Java files information
-* 'edu/handong/csee/plt' package
+* *'edu/handong/csee/plt' package*
   * Main.java\
     'main' method exists here
   * Parser.java\
@@ -41,7 +41,7 @@ ex1. java -cp bin edu/handong/csee/plt/Main "{with {x 10} {+ 4 5}}"
   * Lookup.java\
     For the given symbol, find the corresponding value in the DefrdSub cache. If there is no symbol return free identifier error.
 
-* 'edu/handong/csee/plt/ast' package
+* *'edu/handong/csee/plt/ast' package*
   * Add.java
   * App.java
   * AST.java
@@ -72,52 +72,52 @@ ex1. java -cp bin edu/handong/csee/plt/Main "{with {x 10} {+ 4 5}}"
 
 *self-made examples*
 
-ex1. {with {x 5} {+ x {- x 1}}}\
+*ex1. {with {x 5} {+ x {- x 1}}}*\
 input : "{with {x 5} {+ x {- x 1}}}"\
 output : (numV 9)
 
-ex2. {with {x 10} {- 14 5}}\
+*ex2. {with {x 10} {- 14 5}}*\
 input : "{with {x 10} {- 14 5}}"\
 output : (numV 9)
 
-ex3. {+ x {- 2 1}}\
+*ex3. {+ x {- 2 1}}*\
 input : "{+ x {- 2 1}}"\
 output : lookup: free identifier
 
-ex4. {with {x 1} {+ 3 {{fun {f} {+ f x}} 2}}}\
+*ex4. {with {x 1} {+ 3 {{fun {f} {+ f x}} 2}}}*\
 input : "{with {x 1} {+ 3 {{fun {f} {+ f x}} 2}}}"\
 output : (numV 6)
 
-ex5. {with {y 1} {+ {with {y 3} y} y}}\
+*ex5. {with {y 1} {+ {with {y 3} y} y}}*\
 input : "{with {y 1} {+ {with {y 3} y} y}}"\
 output : (numV 4)
 
-ex6. {with {x 5} {with {y 3} {+ y x}}}\
+*ex6. {with {x 5} {with {y 3} {+ y x}}}*\
 input : "{with {x 5} {with {y 3} {+ y x}}}"\
 output : (numV 8)
 
 *examples from PPT slides and lectures*
 
-ex1. {with {x 3} {with {f {fun {y} {+ x y}}} {with {x 5} {f 4}}}}\
+*ex1. {with {x 3} {with {f {fun {y} {+ x y}}} {with {x 5} {f 4}}}}*\
 input : "{with {x 3} {with {f {fun {y} {+ x y}}} {with {x 5} {f 4}}}}"\
 output : (numV 7)
 
-ex2. {with {y 10} {fun {x} {+ y x}}}\
+*ex2. {with {y 10} {fun {x} {+ y x}}}*\
 input : "{with {y 10} {fun {x} {+ y x}}}"\
 output : (closureV 'x (add (id 'y) (id 'x)) (aSub 'y (numV 10) (mtSub)))
 
-ex3. {with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} z}}}\
+*ex3. {with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} z}}}*\
 input : "{with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} z}}}"\
 output : (closureV 'x (add (id 'x) (id 'y)) (aSub 'y (numV 3) (mtSub)))
 
-ex4. {with {z {fun {x} {+ x y}}} {with {y 10} z}}\
+*ex4. {with {z {fun {x} {+ x y}}} {with {y 10} z}}*\
 input : "{with {z {fun {x} {+ x y}}} {with {y 10} z}}"\
 output : (closureV 'x (add (id 'x) (id 'y)) (mtSub))
 
-ex5. {with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}}\
+*ex5. {with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}}*\
 input : "{with {y 3} {with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}}"\
 output : (numV 8)
 
-ex6. {with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}\
+*ex6. {with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}*\
 input : "{with {z {fun {x} {+ x y}}} {with {y 10} {z 5}}}"\
 output : lookup: free identifier
