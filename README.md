@@ -1,14 +1,15 @@
+##### 22000662 Chun Hye Sun
 # HW3 Implement FAE in your favorite langauge
 
 ## How to Compile and Run
 
 ### In Eclipse
-File → Import → Existing Projects into Workspace → Next → Select archive file → Browse → Choose FAE.zip → Finish -> Run -> Run Configurations -> Select Arguments tab
+File → Import → Existing Projects into Workspace → Next → Select archive file → Browse → Choose HW3_FAE.zip → Finish -> Run -> Run Configurations -> Select Arguments tab
 
-##### Enable only parser
+#### Enable only parser
 ex1. -p "{with {x {- 5 3}} {+ x {- x 1}}}"
 
-##### Enable interpreter
+#### Enable interpreter
 ex1. "{with {x {- 5 3}} {+ x {- x 1}}}"
 
 ### In Terminal
@@ -16,19 +17,19 @@ ex1. "{with {x {- 5 3}} {+ x {- x 1}}}"
 2. Compile
 javac -d [directory containing .class files] [class path where the main method exists] [.java file_that_has_main_method] [class path where other java files exists] [all .java files under that class path]\
 ex1. **javac -d bin edu/handong/csee/plt/Main.java** **edu/handong/csee/plt/ast/*.java** **edu/handong/csee/plt/defsub/*.java** **edu/handong/csee/plt/retval/*.java**
-4. Run
+3. Run
 java -cp [directory containing .class files] [class path where the main method exists] [class name_that_has_main_method] [<option.>] ["<FAE.>"]
 
-* <option> not always required
-* <FAE> concrete syntax of FAE type
+* <option> : not always required
+* <FAE> : a concrete syntax ready to be converted into FAE type
 
 ##### Enable only parser
 set <option.> to '-p'.\
-ex1. java -cp bin edu/handong/csee/plt/Main **-p** "{with {x {- 5 3}} {+ x {- x 1}}}"
+**ex1. java -cp bin edu/handong/csee/plt/Main **-p** "{with {x {- 5 3}} {+ x {- x 1}}}"**
 
 ##### Enable interpreter
 do not set <option.>.\
-ex1. java -cp bin edu/handong/csee/plt/Main "{with {x 10} {+ 4 5}}"
+**ex1. java -cp bin edu/handong/csee/plt/Main "{with {x 10} {+ 4 5}}"**
 
 ## Java files information
 * **'edu/handong/csee/plt' package**
